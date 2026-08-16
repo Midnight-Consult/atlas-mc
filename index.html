@@ -9,7 +9,7 @@
 <meta name="description" content="Atlas Management Consulting helps businesses and medical practices flourish — improving efficiency and productivity, strengthening billing and revenue cycle, capturing every charge, and cutting claim denials.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#1a2332; --slate:#45526b; --mut:#6b7280;
@@ -18,15 +18,16 @@
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--ink);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-family:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
     line-height:1.65;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+  h1,h2{font-family:'Rozha One',Georgia,serif;font-weight:400;line-height:1.18;letter-spacing:0}
+  h3{font-family:'Hanken Grotesk',sans-serif;font-weight:600;line-height:1.25;letter-spacing:-.01em}
   a{color:var(--accent)}
 
   header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);z-index:10}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-  .brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);text-decoration:none}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Hanken Grotesk',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
   .mark{width:42px;height:42px;object-fit:contain;display:block}
   .navlinks{display:flex;gap:26px;align-items:center}
   .navlinks a{font-size:15px;color:var(--slate);text-decoration:none;font-weight:500}
@@ -59,7 +60,7 @@
   /* billing highlight */
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
   .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:13px;padding:28px}
-  .dark .stat h3{font-family:'Fraunces',serif;font-size:34px;color:#fff;margin:0 0 6px}
+  .dark .stat h3{font-family:'Rozha One',serif;font-size:34px;color:#fff;margin:0 0 6px}
   .dark .stat p{color:#b9c7d1;font-size:14px;margin:0}
 
   .checks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
@@ -69,7 +70,7 @@
   /* steps */
   .steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
   .step{position:relative}
-  .step .n{counter-increment:s;font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:#fff;background:var(--accent);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;margin-bottom:14px}
+  .step .n{counter-increment:s;font-family:'Rozha One',serif;font-size:15px;font-weight:700;color:#fff;background:var(--accent);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;margin-bottom:14px}
   .step .n::before{content:counter(s)}
   .step h3{font-size:18px;margin:0 0 8px;color:var(--ink)}
   .step p{color:var(--slate);font-size:15px;margin:0}
@@ -77,17 +78,17 @@
   .about{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:start}
   .about p{color:var(--slate);font-size:16px}
   .factbox{background:#fff;border:1px solid var(--line);border-radius:13px;padding:28px}
-  .factbox h3{font-size:16px;margin:0 0 16px;color:var(--ink);font-family:'Inter';font-weight:600}
+  .factbox h3{font-size:16px;margin:0 0 16px;color:var(--ink);font-family:'Hanken Grotesk';font-weight:600}
   .factbox dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:11px 16px;font-size:14px}
   .factbox dt{color:var(--mut)}
   .factbox dd{margin:0;color:var(--ink);font-weight:500}
 
   .contact-cols{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
   .cform{display:grid;gap:15px}
-  .cform input,.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-family:'Inter';font-size:15px;color:var(--ink);background:#fff}
+  .cform input,.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-family:'Hanken Grotesk';font-size:15px;color:var(--ink);background:#fff}
   .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,93,120,.12)}
   .cform textarea{resize:vertical;min-height:120px}
-  .cform button{justify-self:start;background:var(--accent);color:#fff;border:none;padding:13px 28px;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;font-family:'Inter'}
+  .cform button{justify-self:start;background:var(--accent);color:#fff;border:none;padding:13px 28px;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;font-family:'Hanken Grotesk'}
   .cform button:hover{background:#264c63}
   .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:760px}
   .contact-item .k{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
