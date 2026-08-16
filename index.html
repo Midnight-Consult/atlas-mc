@@ -80,6 +80,13 @@
   .factbox dt{color:var(--mut)}
   .factbox dd{margin:0;color:var(--ink);font-weight:500}
 
+  .contact-cols{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+  .cform{display:grid;gap:15px}
+  .cform input,.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-family:'Inter';font-size:15px;color:var(--ink);background:#fff}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,93,120,.12)}
+  .cform textarea{resize:vertical;min-height:120px}
+  .cform button{justify-self:start;background:var(--accent);color:#fff;border:none;padding:13px 28px;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;font-family:'Inter'}
+  .cform button:hover{background:#264c63}
   .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:760px}
   .contact-item .k{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
   .contact-item .v{font-size:18px;color:var(--ink);font-weight:500}
@@ -108,7 +115,7 @@
       <a href="#services">What we do</a>
       <a href="#billing">Revenue cycle</a>
       <a href="#approach">Approach</a>
-      <a href="#contact" class="cta">Contact</a>
+      <a href="contact.html" class="cta">Contact</a>
     </nav>
   </div>
 </header>
@@ -120,7 +127,7 @@
     <p>Atlas Management Consulting helps businesses — especially medical practices — become more
        efficient, more productive, and more profitable. We tighten the way work flows, strengthen
        billing so nothing billable slips away, and cut the denials that quietly drain revenue.</p>
-    <a href="#contact" class="btn">Start a conversation</a>
+    <a href="contact.html" class="btn">Start a conversation</a>
     <a href="#services" class="btn ghost">See what we do</a>
   </div>
 </div>
@@ -235,7 +242,7 @@
       <h3>Company</h3>
       <dl>
         <dt>Entity</dt><dd>Atlas Management Consulting</dd>
-        <dt>Structure</dt><dd>California Corporation (S-Corp)</dd>
+        <dt>Structure</dt><dd>California Corporation</dd>
         <dt>Founded</dt><dd>2025</dd>
         <dt>Focus</dt><dd>Efficiency, operations &amp; revenue cycle</dd>
         <dt>Serving</dt><dd>Practices across California</dd>
@@ -244,31 +251,18 @@
   </div>
 </section>
 
-<section id="contact">
+<section class="dark" id="contact" style="text-align:center">
   <div class="wrap">
-    <h2>Contact us</h2>
-    <p class="lead">Tell us where your practice feels stretched — the scheduling, the billing, the
-       overhead — and we’ll help you find the leverage to fix it.</p>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <p class="k">Phone</p>
-        <p class="v"><a href="tel:+14085282226">(408) 528-2226</a></p>
-      </div>
-      <div class="contact-item">
-        <p class="k">Fax</p>
-        <p class="v">(408) 766-3909</p>
-      </div>
-      <div class="contact-item" style="grid-column:1/-1">
-        <p class="k">Mailing Address</p>
-        <p class="v">6469 Almaden Expressway, #80-119<br>San Jose, CA 95120</p>
-      </div>
-    </div>
+    <h2>Ready to make your practice run better?</h2>
+    <p class="lead" style="margin:0 auto 34px">Tell us where things feel stretched — scheduling, billing,
+       or overhead — and we’ll help you find the leverage to fix it.</p>
+    <a href="contact.html" class="btn">Contact us</a>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Atlas Management Consulting. San Jose, California.</span>
+    <span>© 2025 Atlas Management Consulting. San Jose, California.</span>
     <span>Practice efficiency · Revenue cycle · Operations</span>
   </div>
 </footer>
