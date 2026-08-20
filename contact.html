@@ -44,23 +44,25 @@
   section{padding:56px 0 72px}
   .soft{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-  .contact-cols{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
-  .cform{display:grid;gap:15px}
-  .cform input,.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-family:'Hanken Grotesk';font-size:15px;color:var(--ink);background:#fff}
-  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,93,120,.12)}
-  .cform textarea{resize:vertical;min-height:130px}
-  .cform button{justify-self:start;background:var(--accent);color:#fff;border:none;padding:13px 30px;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;font-family:'Hanken Grotesk'}
+  .formcard{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px;box-shadow:0 24px 60px -34px rgba(26,35,50,.4)}
+  .cform{display:grid;gap:16px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--slate);margin:0 0 7px;letter-spacing:.01em}
+  .cform input,.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font-family:'Hanken Grotesk';font-size:15px;color:var(--ink);background:#fbfcfd}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(47,93,120,.12)}
+  .cform textarea{resize:vertical;min-height:150px}
+  .cform button{justify-self:stretch;background:var(--accent);color:#fff;border:none;padding:15px 30px;border-radius:10px;font-weight:600;font-size:16px;cursor:pointer;font-family:'Hanken Grotesk'}
   .cform button:hover{background:#264c63}
-  .cinfo{display:grid;gap:24px}
-  .contact-item .k{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
-  .contact-item .v{font-size:18px;color:var(--ink);font-weight:500;margin:0}
-  .contact-item .v a{text-decoration:none}
+  .callrow{margin:30px auto 0;text-align:center;color:var(--slate);font-size:16px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+  .callrow a{text-decoration:none;font-weight:600}
+  .callrow .dot{color:var(--line)}
 
   footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mut);font-size:14px}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
   @media(max-width:820px){
-    .contact-cols{grid-template-columns:1fr;gap:32px}
+    .frow{grid-template-columns:1fr}
+    .formcard{padding:26px}
     .navlinks{display:none}
     .hero{padding:56px 0 4px}section{padding:40px 0 56px}
   }
@@ -74,7 +76,8 @@
     <nav class="navlinks">
       <a href="index.html#services">What we do</a>
       <a href="index.html#billing">Revenue cycle</a>
-      <a href="index.html#approach">Approach</a>
+      <a href="index.html#dictation">Software</a>
+      <a href="podcast.html">Podcast</a>
       <a href="contact.html" class="cta">Contact</a>
     </nav>
   </div>
@@ -91,41 +94,35 @@
 
 <section class="soft">
   <div class="wrap">
-    <div class="contact-cols">
+    <div class="formcard">
       <form class="cform" action="https://formsubmit.co/atlasmconsulting2060@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New inquiry from atlasmconsulting.com">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://atlasmconsulting.com/thankyou.html">
         <input type="text" name="_honey" style="display:none">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <input type="text" name="practice" placeholder="Practice or organization (optional)">
-        <textarea name="message" placeholder="How can we help?" required></textarea>
+        <div class="frow">
+          <div class="field"><label for="name">Name</label><input id="name" type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" placeholder="you@practice.com" required></div>
+        </div>
+        <div class="field"><label for="practice">Practice or organization</label><input id="practice" type="text" name="practice" placeholder="Optional"></div>
+        <div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" placeholder="Tell us where things feel stretched — scheduling, billing, or overhead." required></textarea></div>
         <button type="submit">Send message</button>
       </form>
-      <div class="cinfo">
-        <div class="contact-item">
-          <p class="k">Phone</p>
-          <p class="v"><a href="tel:+14085282226">(408) 528-2226</a></p>
-        </div>
-        <div class="contact-item">
-          <p class="k">Fax</p>
-          <p class="v">(408) 766-3909</p>
-        </div>
-        <div class="contact-item">
-          <p class="k">Mailing Address</p>
-          <p class="v">6469 Almaden Expressway, #80-119<br>San Jose, CA 95120</p>
-        </div>
-      </div>
+    </div>
+    <div class="callrow">
+      <span>Prefer to call?</span>
+      <a href="tel:+14085282226">(408) 528-2226</a>
+      <span class="dot">•</span>
+      <span>Fax (408) 766-3909</span>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© 2025 Atlas Management Consulting. San Jose, California.</span>
-    <span><a href="index.html" style="text-decoration:none;color:var(--mut)">← Back to home</a></span>
+    <span>© 2025 Atlas Management Consulting. All rights reserved.</span>
+    <span><a href="terms.html" style="text-decoration:none;color:var(--mut)">Terms of Use</a> &nbsp;·&nbsp; <a href="index.html" style="text-decoration:none;color:var(--mut)">← Back to home</a></span>
   </div>
 </footer>
 

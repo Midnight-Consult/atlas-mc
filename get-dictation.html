@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloading Atlas Dictation…</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  var FILE = "https://github.com/whotGZ/atlas-dictation/releases/download/v0.4.4/AtlasDictation-0.4.4.dmg";
+  // start the download without leaving this page
+  window.addEventListener("DOMContentLoaded", function(){
+    var a = document.createElement("a");
+    a.href = FILE; a.download = "";
+    document.body.appendChild(a); a.click();
+  });
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;text-align:center;
+    font-family:'Hanken Grotesk',-apple-system,sans-serif;color:#1a2332;
+    background:linear-gradient(180deg,#fbf6ec,#f7f2ff)}
+  .box{max-width:460px;padding:40px 28px}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:34px;margin:0 0 14px}
+  p{color:#45526b;font-size:16px;line-height:1.6;margin:0 0 24px}
+  a.dl{color:#c08a2d;font-weight:600;text-decoration:none}
+  a.home{display:inline-block;margin-top:8px;color:#2f5d78;font-size:15px;text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>Your download is starting…</h1>
+    <p>Atlas Dictation for macOS should begin downloading automatically. If it doesn't,
+       <a class="dl" id="manual" href="#">click here to start it</a>.</p>
+    <a class="home" href="index.html">← Back to Atlas Management Consulting</a>
+  </div>
+  <script>document.getElementById("manual").href = FILE;</script>
+</body>
+</html>
