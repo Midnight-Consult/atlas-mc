@@ -71,13 +71,16 @@
 
   /* billing highlight */
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
-  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:13px;padding:28px}
+  .stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-top:3px solid var(--gold);border-radius:13px;padding:28px}
   .dark .stat h3{font-family:'Cormorant Garamond',serif;font-size:34px;color:#fff;margin:0 0 6px}
   .dark .stat p{color:#b9c7d1;font-size:14px;margin:0}
 
   .checks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
   .checks li{position:relative;padding-left:30px;color:var(--slate);font-size:16px}
   .checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent2);font-weight:700}
+  .dark .checks li{color:#d6e0e8}
+  .dark .checks li strong{color:#fff}
+  .dark .checks li::before{content:"✓";color:#e6b45a;font-weight:800}
 
   /* steps */
   .steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
